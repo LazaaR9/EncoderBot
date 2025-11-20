@@ -20,7 +20,7 @@ import time
 from ... import app, download_dir, log
 from ..database.access_db import db
 from ..display_progress import progress_for_pyrogram
-from ..ffmpeg import get_duration, get_thumbnail, get_width_height
+from ..encoding import get_duration, get_thumbnail, get_width_height
 
 
 async def upload_to_tg(new_file, message, msg):
