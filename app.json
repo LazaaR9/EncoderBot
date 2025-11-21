@@ -7,7 +7,7 @@
     "video",
     "compressor-bot"
   ],
-  "repository": "https://github.com/erotixe/video-encoder-bot",
+  "repository": "https://github.com/abhinai2244/Encoding-Bot.git",
   "logo": "https://graph.org/file/49ab250d34f17b14ae559.jpg",
   "env": {
     "BOT_TOKEN": {
@@ -36,15 +36,15 @@
     },
     "EVERYONE_CHATS":{
       "description": " Chat identifier of the user who can't touch bot code.",
-      "value": "-1001995978690"
+      "value": ""
     },
     "INDEX_URL":{
       "description": "Index url for drive uploads",
-      "value": "https://drive.google.com/drive/folders/12TojrNbqZJz40p1kqGAaMzL8WSDxl2Nq?usp=sharing"
+      "value": ""
     },
     "DRIVE_DIR":{
       "description": "(Optional) Temporary download directory to keep downloaded files.",
-      "value": "12TojrNbqZJz40p1kqGAaMzL8WSDxl2Nq"
+      "value": ""
     },
     "DOWNLOAD_DIR": {
       "description": "Optional: start message of bot, use HTML parsemode format",
@@ -56,12 +56,12 @@
     },
     "SUDO_USERS": {
       "description": "Chat identifier of the sudo user.",
-      "value": "5115691197 6273945163 6103092779 5231212075",
+      "value": "",
       "required": false
     },
     "LOG_CHANNEL": {
       "description": "for bot logs (user and group id will also work!",
-      "value": "-1001868871195",
+      "value": "",
       "required": true
     }
   },
