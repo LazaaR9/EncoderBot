@@ -104,7 +104,8 @@ logging.basicConfig(
     handlers=[
         RotatingFileHandler(
             'VideoEncoder/utils/extras/logs.txt',
-            backupCount=20
+            backupCount=20,
+            encoding='utf-8'
         ),
         logging.StreamHandler()
     ]
