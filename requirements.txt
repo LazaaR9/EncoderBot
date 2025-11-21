@@ -21,6 +21,7 @@ cloudscraper
 lk21
 lxml
 httpx
+speedtest-cli
 
 # Google Drive
 google-api-core
