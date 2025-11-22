@@ -1,28 +1,30 @@
-# Required
-pyrogram==2.0.59
+# Pyrogram & crypto
+pyrogram==1.4.16
 TgCrypto
+
+# Environment & parsing
 python-dotenv
 hachoir
 beautifulsoup4==4.9.1
 bs4==0.0.1
+lxml
 
-# DDL
+# Direct Download Links
 pySmartDL
 requests
+cloudscraper
+lk21==1.5.61
+js2py
+httpx
 
 # Database
 dnspython
 motor
 
-# Others
+# System
 psutil
-js2py
-cloudscraper
-lk21==1.5.61
-lxml
-httpx
 
-# Google Drive
+# Google Drive integration
 google-api-core
 google-auth
 oauth2client<4.0.0
