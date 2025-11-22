@@ -1,56 +1,70 @@
-![Encoder Bot](https://graph.org/file/49ab250d34f17b14ae559.jpg)
+# VideoEncoder Bot
 
-# ᴠɪᴅᴇᴏ ᴇɴᴄᴏᴅᴇʀ ʙᴏᴛ
+A powerful Telegram bot for compressing, encoding, and manipulating video files. Built with Python (Pyrofork) and FFmpeg.
 
-</br>We made this bot for video encoding purpose of telegram files because telegram provides us with unlimited cloud storage and people may be unable to download all videos because of using mobile data. As we know that the mobile data that we get is limited. So by using this bot user can reduce the size of the video and watch the video in less data.
+## 🚀 Features
 
-## Features 
+### 🎥 Video Encoding
+- **Formats**: Supports encoding to **MKV**, **MP4**, **AVI**.
+- **Codecs**: Choose between **H264** (x264) and **H265** (HEVC).
+- **Quality Control**: 
+  - Custom **CRF** (Constant Rate Factor).
+  - **Presets** (UltraFast to VerySlow).
+  - **10-bit** encoding support.
+- **Resolution**: Downscale videos to 1080p, 720p, 540p, 480p, 360p, or keep original.
+- **Audio**: 
+  - Change audio codecs (AAC, AC3, OPUS, MP3, etc.).
+  - Custom bitrate and sample rates.
+  - Mix/Remix audio channels (Stereo, Mono, 5.1).
 
-```
-[+] Make Sure You Add All These Mandatory Vars. 
-    [-] Supports Multiple Users. 
-    [-] Queue Support.
-    [-] Authroize Request and Unauthorize
-    [-] Inbuilt Settings Change Option.
-    [-] Inbuilt restart command.
-    [-] Easy deploy.
-```
+### 🎛 Audio Rearrangement (`/af`)
+- Interactively **reorder audio streams** in a video file using an inline button menu.
+- Set the default audio track by moving it to the top.
 
-## Deploy
+### 📥 Download Methods
+- **Telegram Files** (`/dl`): Reply to a video or document to process it.
+- **Direct Links** (`/ddl`): Download files from direct URLs.
+- **Batch Processing** (`/batch`): Process multiple links or files.
 
-## Variables 
-```
-[+] Make Sure You Add All These Mandatory Vars. 
-    [-] API_ID:   You can get this value from https://my.telegram.org
-    [-] APP_HASH :   You can get this value from https://my.telegram.org
-    [-] OWNER_ID : A user can have full access to bot throught this var.
-    [-] SUDO_USERS  : Chat identifier of the sudo user.
-    [-] EVERYONE_CHATS   :  Chat identifier of the user who can't touch bot code.
-    [-] BOT_TOKEN: Get from botfarther
-    [-] LOG_CHANNEL : for bot logs (user and group id will also work!)
-    [-] SESSION_NAME : your mongo db name
-    [-] MONGO_DB : get from cloud.mongodb.com.'
-    [-] INDEX_URL : Index url for drive uploads.
-    [-] DRIVE_DIR : Google Drive folder id where uploads will be placed.
-[+] The Bot won't run without setting the mandatory vars.
-```
+### 🛠 Utilities
+- **Speedtest** (`/speedtest`): Check the server's internet speed and view a graphical report.
+- **System Status** (`/status`): View real-time CPU, RAM, Disk usage, and active tasks queue.
+- **Settings**: Per-user settings menu (`/settings`) to customize encoding preferences.
+- **Watermark**: Add custom hardsub watermarks or metadata.
+- **Subtitles**: Hardsub or copy soft subtitles.
 
-### Configuring Encoding Format
-To change the ffmpeg profile edit them in [ffmpeg.py](/VideoEncoder/utils/ffmpeg.py)
+## 🤖 Commands
 
-### ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ ᴏʀ ʀᴇɴᴅᴇʀ
+| Command | Description |
+| :--- | :--- |
+| `/start` | Check if the bot is online. |
+| `/help` | Show help message. |
+| `/settings` | Open personal encoding settings menu. |
+| `/reset` | Reset your settings to default. |
+| `/vset` | View current video settings summary. |
+| `/dl` | Download and process a Telegram file (Reply to message). |
+| `/af` | Interactive audio stream rearrangement (Reply to message). |
+| `/ddl [url]` | Download and process a file from a direct link. |
+| `/speedtest` | Run an internet speed test. |
+| `/status` | Show server stats and active queue. |
+| `/stats` | Show bot statistics (Users, Uptime). |
+| `/clean` | (Sudo) Clean download/encode directories. |
+| `/restart` | (Sudo) Restart the bot. |
+| `/update` | (Sudo) Update the bot from git. |
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/erotixe/Video-Encoder-BOT"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-black?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
-</h3>
-<p align="center"><a href="https://render.com/deploy?repo=https://github.com/erotixe/Video-Encoder-BOT/tree/beta">
-<img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
-</a></p>
-<h3 align="center">
+## ⚙️ Configuration
 
-<h3> ─「 ᴄʀᴇᴅɪᴛs 」─
-</h3>
+The bot is configured via environment variables (or `config.env`).
 
-- <b>[ᴍɪᴋᴇʏ](https://github.com/erotixe)  ➻  [ᴇᴠᴇʀʏᴛʜɪɴɢ](https://t.me/veldxd) </b>
- 
-<b>ᴀɴᴅ ᴀʟʟ [ᴛʜᴇ ᴄᴏɴᴛʀɪʙᴜᴛᴏʀs](https://telegram.me/team_netflix) ᴡʜᴏ ʜᴇʟᴩᴇᴅ ɪɴ ᴍᴀᴋɪɴɢ ʀᴇɴᴀᴍᴇ ʙᴏᴛ ᴜsᴇꜰᴜʟ & ᴩᴏᴡᴇʀꜰᴜʟ 🖤 </b>
+- `API_ID`, `API_HASH`: Telegram API credentials.
+- `BOT_TOKEN`: Telegram Bot Token.
+- `MONGO_URI`: MongoDB connection string.
+- `OWNER_ID`: Your Telegram User ID.
+- `SUDO_USERS`: List of admin user IDs.
+- `LOG_CHANNEL`: Channel ID for logging tasks.
+- `DOWNLOAD_DIR`, `ENCODE_DIR`: Paths for working directories.
 
+## 📝 Notes
+
+- **Task Limit**: Each user is limited to one active task at a time to ensure fair usage.
+- **Settings Isolation**: Users cannot modify each other's settings via the interactive menu.
